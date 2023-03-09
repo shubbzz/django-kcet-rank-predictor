@@ -1,0 +1,43 @@
+    <h1>Hii this is shreyas</h1>
+     <body onload="f">
+    <div align="Center" style="background-color: blanchedalmond;position: page; top:5px;height: 500px;border-bottom-color: darkslategray;border-radius: 10px;width:800px" >
+
+        <form action="displaycutoff" method="post">
+
+        {% csrf_token %}
+        SELECT COLLEGE:<select name="" required >
+                        <option value="none"selected disabled hidden>Select a College</option>
+                        {% for i in lists %}
+                        Choose: <option value=i>{{i}}</option>
+                        {% endfor %}
+                         </select>
+        <br><br>Enter Code :<input  name="college"><br><br><br><br>
+        <br>SELECT COURSE:<select name="" required>
+                        <option value="none"selected disabled hidden>Select a Course</option>
+                        {% for i in lists_course %}
+                        Choose: <option value=i>{{i}}</option>
+                        {% endfor %}}
+                        <br>
+                         </select>
+        <br><br>Enter Code :<input  name="course" required><br><br><br><br>
+        <br>SELECT CATEGORY:<select name="category" required >
+                        <option value="none"selected disabled hidden>Select a Category</option>
+                        {% for i in lists_category %}
+                        <option value={{i}}>{{i}}</option>
+                        {% endfor %}}
+                        <br><br></select>
+          <br>ENTER YOUR RANK :<input  name="rank" required><br>
+        <br><br><br><br><input type="submit" >
+<script type="text/javascript">
+    function f(){
+        alert("HI")
+    document.body.style.backgroundColor="#f3f3f3";
+    document.body.style.backgroundImage="url('https://www.istockphoto.com/photos/college')";
+    document.getElementsById("x").style.backgroundImage="a.png"
+    }
+
+</script>
+    </form>
+
+    </div>
+    </body>

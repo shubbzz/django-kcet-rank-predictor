@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base page</title>
+    <style type="text/css">
+        div{
+            color: #1c1b1c;
+            background-color: #f8f6f6;
+margin:auto;
+width:50%;
+border:3px solid #73AD21;
+padding:10px;
+        }
+        h1{
+            margin:auto;
+            font-size: 100%;
+width:40%;
+border:3px solid #73AD21;
+padding:10px;
+            color: black;
+        }
+        h2{
+            font-size: 70%;
+            margin:auto;
+width:40%;
+border:3px solid #73AD21;
+padding:10px;
+            color: black;
+        }
+        body{
+
+            opacity: 0.8;
+            color: #1c1b1c;
+            text-align: center;background: linear-gradient(120deg,#2980b9, #38fdca);
+        }
+        .xfull{
+          font-size: 50px;
+        }
+        .c1{
+            height: 400px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        .c2{height: 200px;
+            width:50%;
+            background-color: #dada9b;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        .c3{height: 200px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        option{
+             height: 100px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 35px;
+            margin:auto;
+        }
+        .home{
+            height: 70px;
+            width:15%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+            float: left;
+        }
+    </style>
+</head>
+ <div class="home"><a href="../../home">Home</a><br><br></div><br>
+<body  >
+
+<div id="logo" class="xfull" style="text-allign:center;">
+
+      <!-- ################################################################################################ -->
+      <h1 class="logoname" allign="center" ><span>CET</span><span> RANK</span> <span>PREDICTOR</span></h1>
+    <h2 class="logoname" allign="center" ><span> PREDICT</span><span> COLLEGE</span></h2>
+      <!-- ################################################################################################ -->
+    </div>
+
+<form action="../../dispredcollege" method="post">
+        {% csrf_token %}
+        <div class="c1"> <br>SELECT COURSE<br><select name="" required style="height: 50px;width: 200px">
+                        <option >Select a Course</option>
+                        {% for i in lists_course %}
+                        Choose: <option value=i>{{i}}</option>
+                        {% endfor %}}
+                        <br>
+                         </select>
+        <br><br>ENTER CODE<br><input  name="course" type="text" autocomplete="off" required style="height: 50px;width: 100px"><br><br><br><br></div>
+        <div class="c2"> <br>SELECT CATEGORY<br><select name="category" required style="height: 50px;width: 200px" >
+                        <option >Select a Category</option>
+                        {% for i in lists_category %}
+                        <option value={{i}}>{{i}}</option>
+                        {% endfor %}}
+                        <br><br></select></div>
+         <div class="c3">  <br>ENTER YOUR RANK <br><input  name="rank" type="text" autocomplete="off"  required style="height: 50px;width: 100px"><br></div>
+        <br><br><br><br><input type="submit" style="height: 100px;width: 200px" >
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base page</title>
+    <style type="text/css">
+        div{
+            margin: 0;
+            padding: 0;
+            font-family: montserrat;
+            background: linear-gradient(120deg,#2980b9, #38fdca);
+            height:100vh;
+            overflow: hidden;
+        }
+        .c1{
+            height: 200px;
+            width:25%;
+            background-color: white;
+            margin: 2px;
+            text-align: center;
+            border: darkslategray;
+border-bottom: #1c1b1c;
+            border-radius: 10px;
+            border-bottom-color: #1c1b1c;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+			background: white;
+        }
+        .c2{height: 200px;
+            width:25%;
+            background-color: white;
+            margin: 2px;
+            text-align: center;
+            border: darkslategray;
+border-bottom: #1c1b1c;
+            border-radius: 10px;
+            border-bottom-color: #1c1b1c;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+			background: white;
+
+
+
+
+
+        }
+        .c3{height: 200px;
+            width:25%;
+            background-color: white;
+            margin: 2px;
+            text-align: center;
+            border: darkslategray;
+border-bottom: #1c1b1c;
+            border-radius: 10px;
+            border-bottom-color: #1c1b1c;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+			background: white;
+
+
+
+
+
+        }
+        .c4{height: 200px;
+            width:25%;
+            background-color: white;
+            margin: 2px;
+            text-align: center;
+            border: darkslategray;
+border-bottom: #1c1b1c;
+            border-radius: 10px;
+            border-bottom-color: #1c1b1c;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+			background: white;
+
+
+
+
+
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        .c5{height: 200px;
+            width:25%;
+            background-color: white;
+            margin: 2px;
+            text-align: center;
+            border: darkslategray;
+border-bottom: #1c1b1c;
+            border-radius: 10px;
+            border-bottom-color: #1c1b1c;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+			background: white;
+
+
+
+
+
+        }
+        body{
+            position: center;
+            text-align: center;
+            background-color: slategrey;
+        }
+    </style>
+</head>
+<body  >
+<div id="logo" class="xfull" style="text-allign:center;">
+      <!-- ################################################################################################ -->
+      <h1 class="logoname" allign="center" ><span> CET</span><span> RANK</span> <span>PREDICTOR</span></h1>
+      <h2 class="logoname" allign="center" ><span> CREATE NEW</span><span> ACCOUNT </span></h2>
+      <!-- ################################################################################################ -->
+
+
+ <form action="accountcreated/" method="post">
+     {% csrf_token %}
+       <div class="c1"><br>ENTER NAME <br><input  name="name" type="text" autocomplete="off" required style="height: 50px;width: 200px"></div>
+        <div class="c2"><br>ENTER PASSWORD <br><input  name="password" type="password" required style="height: 50px;width: 200px"></div>
+        <br><br><br><br><input type="submit" required style="height: 100px;width: 200px" >
+    </form>
+</div>
+</body>
+</html>

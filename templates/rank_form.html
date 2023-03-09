@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base page</title>
+    <style type="text/css">
+
+        body{
+            text-align: center;
+            background: linear-gradient(120deg,#2980b9, #38fdca);
+        }
+        .xfull{
+          font-size: 50px;
+        }
+        h1{
+            alignment: center;
+        }
+        .c1{
+            height: 400px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        .c2{height: 400px;
+            width:50%;
+            background-color: #dada9b;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        .c3{height: 400px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        input{
+             height: 100px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 30px;
+            margin:auto;
+        }
+        .home{
+            height: 70px;
+            width:15%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+            float: left;
+        }
+    </style>
+</head>
+<body  >
+<div class="home"><a href="../../">Home</a><br><br></div>
+<div id="logo" class="xfull" style="text-allign:center;">
+      <!-- ################################################################################################ -->
+    </br>  <h1 class="logoname" allign="center" ><span>CET</span><span> RANK</span> <span>PREDICTOR</span></h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <form action="../../disrank" method="post">
+        {% csrf_token %}
+       <div class="c1">
+        <br><br>ENTER MATHEMATICS MARKS<br><input  name="maths" type="text" autocomplete="off" required style="height: 50px;width: 200px" ><br><br><br><br></div>
+        <div class="c2"> <br>
+        <br><br>ENTER PHYSICS MARKS <br><input  name="physics"  type="text" autocomplete="off" required style="height: 50px;width: 200px" ><br><br><br><br></div>
+        <div class="c3">
+            <br><br>ENTER CHEMISTRY MARKS <br><input  name="chemistry" type="text" autocomplete="off" required style="height: 50px;width: 200px" ><br><br><br><br><br>
+</div>
+        <br><br><br><br><input type="submit" style="height: 100px;width: 200px;" >
+
+        </div>
+    </form>
+
+
+</body>
+</html>

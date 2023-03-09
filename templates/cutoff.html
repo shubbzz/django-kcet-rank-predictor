@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base page</title>
+    <style type="text/css">
+        div{
+            color: #1c1b1c;
+            background-color: #d7cfcf;
+            margin: 2px;
+            font-size: 25px;
+        }
+        body{
+
+            opacity: 0.8;
+            color: #1c1b1c;
+            text-align: center; background: linear-gradient(120deg,#2980b9, #38fdca);
+        }
+         .home{
+            height: 70px;
+            width:15%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+            float: left;
+        }
+          h1{
+            margin:auto;
+width:40%;
+border:3px solid #73AD21;
+padding:10px;
+            color: black;
+        }
+        h2{
+            margin:auto;
+width:40%;
+border:3px solid #73AD21;
+padding:10px;
+            color: black;
+        }
+         .c{
+             margin:auto;
+width:60%;
+border:3px solid #73AD21;
+padding:10px;
+         }
+         .xfull{
+             margin:auto;
+width:60%;
+border:3px solid #73AD21;
+padding:10px;
+         }
+    </style>
+</head>
+<body  >
+<div id="logo" class="xfull" style="text-allign:center;">
+     <div class="home"><a href="../../home">Home</a><br><br></div><br><br>
+      <!-- ################################################################################################ -->
+      <h1 class="logoname" allign="center" ><span> CET</span><span> RANK</span> <span>PREDICTOR</span></h1>
+    <h1 class="logoname" allign="center" ><span> KNOW</span><span> CUTOFF</span></h1>
+      <!-- ################################################################################################ -->
+    </div>
+    {% block content %}
+<div align="Center" class="c">
+    <h2>THE PREDICTED CUTOFF IS </h2>
+        (YEAR,CUTOFF)<br>
+    {% csrf_token %}
+        {% for i in lists %}
+            {{i}}<br>
+        {% endfor %}
+
+
+</div>
+    {% endblock %}
+</body>
+</html>

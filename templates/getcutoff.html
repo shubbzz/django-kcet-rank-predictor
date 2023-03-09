@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base page</title>
+    <style type="text/css">
+
+        body{
+            opacity: 0.8;
+            color: #1c1b1c;
+            text-align: center; background: linear-gradient(120deg,#2980b9, #38fdca);
+        }
+
+        .xfull{
+          font-size: 50px;
+        }
+        .c1{
+            height: 400px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        .c2{height: 400px;
+            width:50%;
+            background-color: #dada9b;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        .c3{height: 400px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+        }
+        option{
+             height: 100px;
+            width:50%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 30px;
+            margin:auto;
+        }
+        .home{
+            height: 70px;
+            width:15%;
+            background-color: lightgoldenrodyellow;
+            margin: 2px;
+            font-size: 50px;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            margin:auto;
+            float: left;
+        }
+
+    </style>
+</head>
+<body  >
+<div id="logo" class="xfull" style="text-allign:center;">
+    <div class="home"><a href="../../home">Home</a><br><br></div><br>
+      <!-- ################################################################################################ -->
+      <h1 class="logoname" allign="center" ><span> CET</span><span> RANK</span> <span>PREDICTOR</span></h1>
+      <!-- ################################################################################################ -->
+    </div>
+    <form action="../displaycutoff" method="post">
+        {% csrf_token %}
+       <div class="c1"> SELECT COLLEGE<br><select name="shreyas" required style="height: 50px;width: 200px">
+                        <option >Select a College</option>
+                        {% for i in lists %}
+                        Choose: <option value=i>{{i}}</option>
+                        {% endfor %}
+                         </select>
+        <br><br>ENTER CODE <br><input  name="college" type="text" autocomplete="off" required style="height: 50px;width: 200px"><br><br><br><br></div>
+        <div class="c2"> <br>SELECT COURSE<br><select name="" required style="height: 50px;width: 200px">
+                        <option >Select a Course</option>
+                        {% for i in lists_course %}
+                        Choose: <option value=i>{{i}}</option>
+                        {% endfor %}}
+                        <br>
+                         </select>
+        <br><br>ENTER CODE <br><input  name="course"  type="text" autocomplete="off" required style="height: 50px;width: 200px"><br><br><br><br></div>
+        <div class="c3"> <br>SELECT CATEGORY<br><select name="category" required style="height: 50px;width: 200px" >
+                        <option >Select a Category</option>
+                        {% for i in lists_category %}
+                        <option value={{i}}>{{i}}</option>
+                        {% endfor %}}
+                        <br><br></select>
+</div>
+        <br><br><br><br><input type="submit" required style="height: 100px;width: 200px" >
+    </form>
+
+
+</body>
+</html>
